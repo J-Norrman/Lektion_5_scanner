@@ -5,33 +5,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        boolean isPlaying = true;
 
-
+        Scanner sc = new Scanner(System.in);
         do {
 
-          int result = scannerNum();
-            if (result > 1000){
-                break;
-            }
-          for (int i = 0; i < result; i++) {
-              System.out.println(i);
-              System.out.println("looping..");
-          }
-        } while (isPlaying);
+            System.out.println("Input number");
+            int result = sc.nextInt();
 
-    }
-    public static int scannerNum(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Insert number");
-        sc.hasNextInt();
+            System.out.println("You picked: " + result);
 
-        return sc.nextInt();
-    }
-    public static String scannerText(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Insert sentence");
-        String input = sc.nextLine();
-        return input;
+        } while (true);
+
     }
 }
